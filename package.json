@@ -1,0 +1,21 @@
+{
+  "name": "@archives/base",
+  "version": "0.0.1",
+  "description": "A new style of code documentation with a built in linter",
+  "main": "archives.js",
+  "keywords": [
+    "documentation",
+    "jsdoc",
+    "archives",
+    "lint"
+  ],
+  "author": "Conlin Durbin <sup@wuz.fyi>",
+  "license": "MIT",
+  "dependencies": {
+    "array-flat-polyfill": "^1.0.1",
+    "escodegen": "^1.12.0",
+    "escomplex": "^2.0.0-alpha",
+    "esprima": "^4.0.1",
+    "string.prototype.matchall": "^3.0.1"
+  }
+}
