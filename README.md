@@ -16,7 +16,7 @@
 ### Installation
 
 ```bash
-pip install archives
+npm install archives
 ```
 
 ### Run the Linter
