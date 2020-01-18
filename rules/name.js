@@ -1,13 +1,22 @@
 const BaseRule = require("./BaseRule");
 
+/*
+  @name Name
+  @desc A rule that requires a archive object to have a description
+*/
 class Name extends BaseRule {
   constructor(block) {
     super(block);
     this.NAME_REGEX = /\@name:?\s+([a-zA-Z]+)$/gim;
     this.ERRORS = {
-      NAME_ERROR: (expected, recieved) =>
-        `Expected ${this.getType()} name to be ${expected}. Recieved ${recieved} instead.`,
-      NO_NAME_ERROR: fn => `Expected ${this.getType()} ${fn} to have @name tag`
+      NAME_ERROR: (expected, recieved) => ({
+        error: `Expected ${this.getType()} name to be ${expected}. Recieved ${recieved} instead.`,
+        name: "incorrect-name-tag"
+      }),
+      NO_NAME_ERROR: fn => ({
+        error: `Expected ${this.getType()} ${fn} to have @name tag`,
+        name: "no-name-tag"
+      })
     };
   }
 

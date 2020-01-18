@@ -1,5 +1,9 @@
 const BaseRule = require("./BaseRule");
 
+/*
+  @name Args
+  @desc A rule for making sure a function has documented it's arguments
+*/
 class Args extends BaseRule {
   constructor(block) {
     super(block);

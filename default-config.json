@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-archives-block": "warn"
+  }
+}

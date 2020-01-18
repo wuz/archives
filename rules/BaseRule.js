@@ -1,5 +1,9 @@
 const matchAll = require("string.prototype.matchall");
 
+/*
+  @name BaseRule
+  @desc A class that defines a basic set of attributes for creating a rule
+*/
 module.exports = class BaseRule {
   constructor(block) {
     this.IS_ARCHIVES_REGEX = /(\@)+(?:.+)/gim;

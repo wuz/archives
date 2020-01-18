@@ -2,7 +2,12 @@ const complexity = require("escomplex");
 var es = require("escodegen");
 const BaseRule = require("./BaseRule");
 
-class Meta extends BaseRule {
+/*
+  @name Complexity
+  @desc A rule for setting a functions cyclomatic complexity and making sure it doesn't accidentally change
+*/
+
+class Complexity extends BaseRule {
   constructor(block) {
     super(block);
     this.CC_REGEX = /\@cc:?\s+([0-9]+)$/gim;
@@ -28,4 +33,4 @@ class Meta extends BaseRule {
   }
 }
 
-module.exports = Meta;
+module.exports = Complexity;

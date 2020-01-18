@@ -1,11 +1,18 @@
 const BaseRule = require("./BaseRule");
 
+/*
+  @name Description
+  @desc A rule that requires a archives block to have a description
+*/
 class Description extends BaseRule {
   constructor(block) {
     super(block);
     this.DESC_REGEX = /\@desc:?\s+(.+)$/gim;
     this.ERRORS = {
-      NO_DESC_ERROR: fn => `Expected ${this.getType()} ${fn} to have @desc tag`
+      NO_DESC_ERROR: fn => ({
+        error: `Expected ${this.getType()} ${fn} to have @desc tag`,
+        name: "no-desc-tag"
+      })
     };
   }
 
